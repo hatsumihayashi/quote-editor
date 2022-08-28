@@ -1,0 +1,14 @@
+ja:
+  simple_form:
+    placeholders:
+      quote:
+        name: 見積りのタイトル
+    labels:
+      quote:
+        name: タイトル
+
+  helpers:
+    submit:
+      quote:
+        create: 見積りを作る
+        update: 見積りを更新する
