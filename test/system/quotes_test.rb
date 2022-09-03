@@ -2,12 +2,8 @@ require "application_system_test_case"
 
 class QuotesTest < ApplicationSystemTestCase
   setup do
-    @quote = quotes(:first) # Reference to the first fixture quote
+    @quote = quotes(:first)
   end
-
-  # ...
-  # The test we just wrote
-  # ...
 
   test "Showing a quote" do
     visit quotes_path
@@ -16,14 +12,30 @@ class QuotesTest < ApplicationSystemTestCase
     assert_selector "h1", text: @quote.name
   end
 
+
+  test "Creating a new quote" do
+    visit quotes_path
+    assert_selector "h1", text: "見積り一覧"
+
+    click_on "見積りを追加"
+    fill_in "見積りのタイトル", with: "Capybaraで見積り"
+
+    assert_selector "h1", text: "見積り一覧"
+    click_on "見積りを作る"
+
+    assert_selector "h1", text: "見積り一覧"
+    assert_text "Capybaraで見積り"
+  end
+
+
   test "Updating a quote" do
     visit quotes_path
     assert_selector "h1", text: "見積り一覧"
 
     click_on "更新", match: :first
-    assert_selector "h1", text: "見積りを更新"
-
     fill_in "見積りのタイトル", with: "見積りをあたらしいNameに更新"
+
+    assert_selector "h1", text: "見積り一覧"
     click_on "見積りを更新"
 
     assert_selector "h1", text: "見積り一覧"
