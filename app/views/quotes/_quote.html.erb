@@ -5,6 +5,7 @@
       <%= button_to "削除",
                     quote_path(quote),
                     method: :delete,
+                    form: { data: { turbo_frame: "_top" } },
                     class: "btn btn--light" %>
       <%= link_to "更新",
                   edit_quote_path(quote),
