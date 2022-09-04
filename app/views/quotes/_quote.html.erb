@@ -1,12 +1,14 @@
-<div class="quote">
-  <%= link_to quote.name, quote_path(quote) %>
-  <div class="quote__actions">
-    <%= button_to "削除",
-                  quote_path(quote),
-                  method: :delete,
+<%= turbo_frame_tag "quote_#{quote.id}" do %>
+  <div class="quote">
+    <%= link_to quote.name, quote_path(quote) %>
+    <div class="quote__actions">
+      <%= button_to "削除",
+                    quote_path(quote),
+                    method: :delete,
+                    class: "btn btn--light" %>
+      <%= link_to "更新",
+                  edit_quote_path(quote),
                   class: "btn btn--light" %>
-    <%= link_to "更新",
-                edit_quote_path(quote),
-                class: "btn btn--light" %>
+    </div>
   </div>
-</div>
+<% end %>
