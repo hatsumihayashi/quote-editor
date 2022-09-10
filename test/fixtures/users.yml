@@ -1,11 +1,14 @@
 accountant:
+  company: one
   email: accountant@first.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 manager:
+  company: one
   email: manager@first.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
 
 eavesdropper:
+  company: two
   email: eavesdropper@second.com
   encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
