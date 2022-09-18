@@ -12,8 +12,8 @@ ja:
   helpers:
     submit:
       quote:
-        create: 見積りを作る
-        update: 見積りを更新する
+        create: 追加する
+        update: 更新する
       line_item_date:
-        create: 日付を追加
-        update: 日付を更新
+        create: 追加する
+        update: 更新する
