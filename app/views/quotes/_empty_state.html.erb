@@ -1,9 +1,9 @@
 <div class="empty-state empty-state--only-child">
   <p class="empty-state__text">
-    You don't have any quotes yet!
+    まだ見積りが作成されていません
   </p>
 
-  <%= link_to "Add quote",
+  <%= link_to "見積りを追加",
               new_quote_path,
               class: "btn btn--primary",
               data: { turbo_frame: dom_id(Quote.new) } %>
