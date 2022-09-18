@@ -22,7 +22,7 @@ class QuotesTest < ApplicationSystemTestCase
     fill_in "見積りのタイトル", with: "Capybaraで見積り"
 
     assert_selector "h1", text: "見積り一覧"
-    click_on "見積りを作る"
+    click_on "追加する"
 
     assert_selector "h1", text: "見積り一覧"
     assert_text "Capybaraで見積り"
@@ -37,7 +37,7 @@ class QuotesTest < ApplicationSystemTestCase
     fill_in "見積りのタイトル", with: "見積りをあたらしいNameに更新"
 
     assert_selector "h1", text: "見積り一覧"
-    click_on "見積りを更新"
+    click_on "更新する"
 
     assert_selector "h1", text: "見積り一覧"
     assert_text "見積りをあたらしいNameに更新"
