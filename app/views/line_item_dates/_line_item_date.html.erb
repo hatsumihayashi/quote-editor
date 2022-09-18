@@ -8,6 +8,7 @@
       <%= button_to "削除",
                     [quote, line_item_date],
                     method: :delete,
+                    form: { data: { turbo_confirm: "本当に削除しますか？" } },
                     class: "btn btn--light" %>
       <%= link_to "更新",
                   [:edit, quote, line_item_date],
