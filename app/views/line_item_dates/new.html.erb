@@ -1,0 +1,9 @@
+<main class="container">
+  <%= link_to sanitize("&larr; 見積りに戻る"), quote_path(@quote) %>
+
+  <div class="header">
+    <h1>日付を追加</h1>
+  </div>
+
+  <%= render "form", quote: @quote, line_item_date: @line_item_date %>
+</main>
